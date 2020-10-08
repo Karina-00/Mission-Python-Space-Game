@@ -1,22 +1,23 @@
 # Escape - A Python Adventure 
 # by Sean McManus / www.sean.co.uk
 # Art by Rafael Pimenta
-# Typed in by PUT YOUR NAME HERE
+# Typed in by Karina Szubert
 
-import time, random, math
+import time
+import random
 
 ###############
 ## VARIABLES ##
 ###############
 
-WIDTH = 800 #window size
+WIDTH = 800
 HEIGHT = 800
 
-#PLAYER variables
-PLAYER_NAME = "Sean" # change this to your name!
-FRIEND1_NAME = "Karen" # change this to a friend's name!
-FRIEND2_NAME = "Leo" # change this to another friend's name!
-current_room = 31 # start room = 31
+#PLAYER resources
+PLAYER_NAME = "Karina"
+FRIEND1_NAME = "Karen"
+FRIEND2_NAME = "Leo"
+current_room = 31
 
 top_left_x = 100
 top_left_y = 150
@@ -36,14 +37,14 @@ PLAYER = {
     "left": [images.spacesuit_left, images.spacesuit_left_1,
              images.spacesuit_left_2, images.spacesuit_left_3,
              images.spacesuit_left_4
-             ], 
+             ],
     "right": [images.spacesuit_right, images.spacesuit_right_1,
               images.spacesuit_right_2, images.spacesuit_right_3,
               images.spacesuit_right_4
               ],
     "up": [images.spacesuit_back, images.spacesuit_back_1,
            images.spacesuit_back_2, images.spacesuit_back_3,
-           images.spacesuit_back_4 
+           images.spacesuit_back_4
            ],
     "down": [images.spacesuit_front, images.spacesuit_front_1,
              images.spacesuit_front_2, images.spacesuit_front_3,
@@ -358,23 +359,23 @@ assert check_counter == 161, "Expected 161 scenery items"
 assert checksum == 200095, "Error in scenery data"
 print("Scenery checksum: " + str(checksum))
 
-for room in range(1, 26):# Add random scenery in planet locations.
-    if room != 13: # Skip room 13.
+for room in range(1, 26):  # Add random scenery in planet locations.
+    if room != 13:  # Skip room 13.
         scenery_item = random.choice([16, 28, 29, 30])
         scenery[room] = [[scenery_item, random.randint(2, 10),
                           random.randint(2, 10)]]
         
 # Use loops to add fences to the planet surface rooms.
 for room_coordinate in range(0, 13):
-    for room_number in [1, 2, 3, 4, 5]: # Add top fence
+    for room_number in [1, 2, 3, 4, 5]:  # Add top fence
         scenery[room_number] += [[31, 0, room_coordinate]]
-    for room_number in [1, 6, 11, 16, 21]: # Add left fence
+    for room_number in [1, 6, 11, 16, 21]:  # Add left fence
         scenery[room_number] += [[31, room_coordinate, 0]]
-    for room_number in [5, 10, 15, 20, 25]: # Add right fence
+    for room_number in [5, 10, 15, 20, 25]:  # Add right fence
         scenery[room_number] += [[31, room_coordinate, 12]]
 
-del scenery[21][-1] # Delete last fence panel in Room 21
-del scenery[25][-1] # Delete last fence panel in Room 25
+del scenery[21][-1]  # Delete last fence panel in Room 21
+del scenery[25][-1]  # Delete last fence panel in Room 25
            
 
 ###############
