@@ -1,5 +1,5 @@
 # Space game
-This game was created using a book "Mission Python" of Sean McManus.
+This game was created using a book "Mission Python" by Sean McManus.
 
 ![Book image](images/_book.jpg)
 
