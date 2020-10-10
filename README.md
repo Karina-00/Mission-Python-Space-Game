@@ -1,7 +1,7 @@
 # Space game
 This game was created using a book "Mission Python" of Sean McManus.
 
-![book image](images/_book.jpg)
+![Book image](images/_book.jpg)
 
 ## Source
 
@@ -17,7 +17,7 @@ For information on Sean's other books, including Cool Scratch Projects in Easy S
 http://www.sean.co.uk/books/index.shtm
 
 ## Game
-![game screenshot](images/_readme.png)
+![Game screenshot](images/_readme.png)
 
 ## Installing
 
